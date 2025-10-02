@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button onclick="enter()">Enter</button>
+    <div id="output"> </div>
+
+    <script>
+        function enter(){
+            // get the value from input
+            let input = document.getElementById("numberInput").value;
+            
+            // use backticks for template literals
+            document.getElementById("output").textContent = `Your input number is ${input}`;
+        }
+    </script>
+</body>
+</html>

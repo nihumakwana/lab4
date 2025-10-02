@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Function</title>
+</head>
+<body>
+    <h2>This is a square function:</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button onclick="showSquare()">Enter</button>
+    <div id="output"></div>
+
+    <script>
+    
+        function squareClosure() {
+            return function(num) {
+                return num * num;
+            };
+        }
+
+        
+        const square = squareClosure();
+
+        function showSquare() {
+            let input = document.getElementById("numberInput").value;
+            let num = Number(input);
+            let result = square(num);  
+            document.getElementById("output").textContent = `Square of ${num} is ${result}`;
+        }
+    </script>
+</body>
+</html>
